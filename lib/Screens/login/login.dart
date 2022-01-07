@@ -13,9 +13,22 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
+            Container(
+              height: 50.0,
+              width: 50.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      'assets/icon_user.png'),
+                  fit: BoxFit.fill,
+                ),
+                shape: BoxShape.rectangle,
+              ),
+            ),
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 40),
+              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
               child: Text(
                 "LOGIN",
                 style: TextStyle(

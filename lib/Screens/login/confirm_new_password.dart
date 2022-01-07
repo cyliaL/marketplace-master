@@ -15,10 +15,23 @@ class Confirm_New_Password extends StatelessWidget {
           children: <Widget>[
 
             Container(
+              height: 50.0,
+              width: 50.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      'assets/icon_password.png'),
+                  fit: BoxFit.fill,
+                ),
+                shape: BoxShape.rectangle,
+              ),
+            ),
+
+            Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 60),
+              padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
-                "Saisissez votre nouveau mot de passe",
+                "Réinitialiser mot de passe",
                 style: TextStyle(
                     color: Color(0xFFFF725E),
                     fontWeight: FontWeight.bold,
@@ -27,6 +40,22 @@ class Confirm_New_Password extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            SizedBox(height: size.height * 0.02),
+            Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Text(
+                "Veuillez saisir votre nouveau mot de passe",
+                style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    color: Color(0xFF4E4949),
+                    fontSize: 16
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+
+            SizedBox(height: size.height * 0.06),
 
             Container(
               alignment: Alignment.center,
@@ -49,11 +78,11 @@ class Confirm_New_Password extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: size.height * 0.03),
+            SizedBox(height: size.height * 0.08),
 
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+              margin: EdgeInsets.symmetric(horizontal: 40),
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));

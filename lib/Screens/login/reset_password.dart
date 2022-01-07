@@ -15,8 +15,21 @@ class Reset_Password extends StatelessWidget {
           children: <Widget>[
 
             Container(
+              height: 50.0,
+              width: 50.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      'assets/icon_password.png'),
+                  fit: BoxFit.fill,
+                ),
+                shape: BoxShape.rectangle,
+              ),
+            ),
+
+            Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
                 "Vous avez oublié le mot de passe ?",
                 style: TextStyle(
@@ -28,9 +41,11 @@ class Reset_Password extends StatelessWidget {
               ),
             ),
 
+            SizedBox(height: size.height * 0.03),
+
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
                 "Saisissez votre adresse mail pour la vérification",
                 style: TextStyle(
@@ -42,6 +57,7 @@ class Reset_Password extends StatelessWidget {
               ),
             ),
 
+
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
@@ -52,12 +68,12 @@ class Reset_Password extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: size.height * 0.03),
+            SizedBox(height: size.height * 0.06),
 
 
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+              margin: EdgeInsets.symmetric(horizontal: 40),
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Recuperate_Code()));

@@ -15,8 +15,21 @@ class Recuperate_Code extends StatelessWidget {
           children: <Widget>[
 
             Container(
+              height: 50.0,
+              width: 50.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                      'assets/icon_password.png'),
+                  fit: BoxFit.fill,
+                ),
+                shape: BoxShape.rectangle,
+              ),
+            ),
+
+            Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+              padding: EdgeInsets.symmetric(horizontal: 40),
               child: Text(
                 "Vérifiez votre email",
                 style: TextStyle(
@@ -28,9 +41,11 @@ class Recuperate_Code extends StatelessWidget {
               ),
             ),
 
+            SizedBox(height: size.height * 0.03),
+
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+              padding: EdgeInsets.symmetric(horizontal: 30),
               child: Text(
                 "Saisissez le code à 6 chiffres envoyé à",
                 style: TextStyle(
@@ -41,6 +56,7 @@ class Recuperate_Code extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+
 
             Container(
               alignment: Alignment.center,
@@ -67,16 +83,16 @@ class Recuperate_Code extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: size.height * 0.03),
+            SizedBox(height: size.height * 0.04),
 
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 5),
+              margin: EdgeInsets.symmetric(horizontal: 40),
               child: GestureDetector(
                 onTap: () => {
                 },
                 child: Text(
-                  "Renvoyer un code",
+                  "Renvoyer le code",
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -86,9 +102,11 @@ class Recuperate_Code extends StatelessWidget {
               ),
             ),
 
+            SizedBox(height: size.height * 0.04),
+
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+              margin: EdgeInsets.symmetric(horizontal: 40),
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => Confirm_New_Password()));
