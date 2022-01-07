@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace_example/Screens/login/confirm_new_password.dart';
 import 'package:marketplace_example/Screens/login/login.dart';
 import 'package:marketplace_example/Screens/components/background.dart';
+import 'package:marketplace_example/Screens/login/recuperate_code.dart';
 
-class Recuperate_Code extends StatelessWidget {
+class Confirm_New_Password extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -16,12 +16,12 @@ class Recuperate_Code extends StatelessWidget {
 
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 60),
               child: Text(
-                "Vérifiez votre email",
+                "Saisissez votre nouveau mot de passe",
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
                     color: Color(0xFFFF725E),
+                    fontWeight: FontWeight.bold,
                     fontSize: 22
                 ),
                 textAlign: TextAlign.center,
@@ -30,39 +30,21 @@ class Recuperate_Code extends StatelessWidget {
 
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-              child: Text(
-                "Saisissez le code à 6 chiffres envoyé à",
-                style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    color: Color(0xFF4E4949),
-                    fontSize: 16
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-
-            Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              child: Text(
-                "hc_laoufi@esi.dz",
-                style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    color: Color(0xFF4E4949),
-                    fontSize: 16
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-
-
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+              margin: EdgeInsets.symmetric(horizontal: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Code"
+                    labelText: "Nouveau mot de passe"
+                ),
+              ),
+            ),
+
+
+            Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(horizontal: 40),
+              child: TextField(
+                decoration: InputDecoration(
+                    labelText: "Confirmez nouveau mot de passe"
                 ),
               ),
             ),
@@ -71,27 +53,10 @@ class Recuperate_Code extends StatelessWidget {
 
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 5),
-              child: GestureDetector(
-                onTap: () => {
-                },
-                child: Text(
-                  "Renvoyer un code",
-                  style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF030303)
-                  ),
-                ),
-              ),
-            ),
-
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 30),
               child: RaisedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Confirm_New_Password()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
                 textColor: Colors.white,
@@ -111,7 +76,7 @@ class Recuperate_Code extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.all(0),
                   child: Text(
-                    "Confirmer",
+                    "Réinitialiser",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold

@@ -10,19 +10,19 @@ class OnBoardingPage extends StatelessWidget {
           pages: [
             PageViewModel(
               title: 'Vendre et acheter en ligne',
-              body: ' Gagnez du temps, vendez et achetez des articles depuis chez vous ',
+              body: ' Gagnez du temps, vendez et achetez depuis chez vous ',
               image: buildImage('assets/pic1.png'),
               decoration: getPageDecoration(),
             ),
             PageViewModel(
               title: "Consulter les articles",
-              body: "C'est possible de consulter le prix, la couleur et la taille de l'article",
+              body: "C'est possible de consulter le prix, la couleur, la taille...",
               image: buildImage('assets/pic2.png'),
               decoration: getPageDecoration(),
             ),
             PageViewModel(
               title: 'Paiement en ligne',
-              body: 'Utilisez la carte EDAHABIA, la carte de crédit',
+              body: "C'est possible de payer en ligne avec la carte EDAHABIA",
               image: buildImage('assets/pic3.png'),
               decoration: getPageDecoration(),
             ),
@@ -74,10 +74,11 @@ class OnBoardingPage extends StatelessWidget {
       );
 
   PageDecoration getPageDecoration() => PageDecoration(
-        titleTextStyle: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-        bodyTextStyle: TextStyle(fontSize: 20),
-        descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
-        imagePadding: EdgeInsets.all(24),
+        titleTextStyle: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Color(0xFF4E4949)),
+        bodyTextStyle: TextStyle(fontSize: 16, color: Color(0xFF4E4949)),
+        //descriptionPadding: EdgeInsets.all(30).copyWith(bottom: 0),
+        titlePadding: EdgeInsets.symmetric(vertical: 30),
+        imagePadding: EdgeInsets.all(30),
         pageColor: Colors.white,
       );
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace_example/Screens/login/login.dart';
-import 'package:marketplace_example/components/background.dart';
+import 'package:marketplace_example/Screens/components/background.dart';
 
 class RegisterScreen extends StatelessWidget {
   @override

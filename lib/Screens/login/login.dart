@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace_example/Screens/register/register.dart';
 import 'package:marketplace_example/Screens/login/reset_password.dart';
-import 'package:marketplace_example/components/background.dart';
+import 'package:marketplace_example/Screens/components/background.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                 child: Text(
                   "Mot de passe oublié?",
                   style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 14,
                       color: Color(0xFFFF725E)
                   ),
                 ),
@@ -114,7 +114,7 @@ class LoginScreen extends StatelessWidget {
                 child: Text(
                   "Vous n'avez pas un compte? Sign up",
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: Color(0xFF030303)
                   ),

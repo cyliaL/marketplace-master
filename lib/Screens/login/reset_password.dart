@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marketplace_example/Screens/login/login.dart';
-import 'package:marketplace_example/components/background.dart';
+import 'package:marketplace_example/Screens/components/background.dart';
 import 'package:marketplace_example/Screens/login/recuperate_code.dart';
 
 class Reset_Password extends StatelessWidget {
@@ -15,41 +15,39 @@ class Reset_Password extends StatelessWidget {
           children: <Widget>[
 
             Container(
-              height: 130.0,
-              width: 110.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                      'assets/Reset_password_pana.png'),
-                  fit: BoxFit.fill,
-                ),
-                shape: BoxShape.rectangle,
-              ),
-            ),
-
-
-            Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
               child: Text(
-                "Réinitialiser le mot de passe",
+                "Vous avez oublié le mot de passe ?",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFF454242),
-                    fontSize: 20
+                    color: Color(0xFFFF725E),
+                    fontSize: 22
                 ),
                 textAlign: TextAlign.center,
               ),
             ),
 
-
+            Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: Text(
+                "Saisissez votre adresse mail pour la vérification",
+                style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    color: Color(0xFF000000),
+                    fontSize: 16
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
 
             Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 80),
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
               child: TextField(
                 decoration: InputDecoration(
-                    labelText: "Saisissez votre email"
+                    labelText: "Email"
                 ),
               ),
             ),
@@ -82,7 +80,7 @@ class Reset_Password extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.all(0),
                   child: Text(
-                    "Réinitialiser",
+                    "Vérifier l'email",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontWeight: FontWeight.bold
